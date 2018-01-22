@@ -45,19 +45,30 @@ task autonomous()
 
 task usercontrol()
 {
+	bool pressed = false;
 	const int speed = 0.5;
+	int motorSwitch = 1;
 	while(true)
 	{
-		motor(fRbR) = vexRT[Ch3] - (vexRT[Ch4] * (speed));
-		motor(fLbL) = vexRT[Ch3] + (vexRT[Ch4] * (speed));
-
-		motor(armRight) = vexRT[Ch2];
-		motor(armLeft) = vexRT[Ch2];
-
-		motor(linearRight) = vexRT[Btn8U];
-		motor(linearLeft) = vexRT[Btn8D];
-
-		motor(clawRight) = vexRT[Btn6U];
-		motor(clawLeft) = vexRT[Btn6D];
+		if(vexRT[Btn7L]) {
+			if(!pressed)
+			{
+				motorSwitch *= -1;
+			}
+			pressed = true;
+			} else {
+			pressed = false;
+		}
 	}
+	motor(fRbR) = (vexRT[Ch3] - (vexRT[Ch4] * (speed))) * motorSwitch;
+	motor(fLbL) = (vexRT[Ch3] + (vexRT[Ch4] * (speed))) * motorSwitch;
+
+	motor(armRight) = vexRT[Ch2];
+	motor(armLeft) = vexRT[Ch2];
+
+	motor(linearRight) = vexRT[Btn8U];
+	motor(linearLeft) = vexRT[Btn8D];
+
+	motor(clawRight) = vexRT[Btn6U];
+	motor(clawLeft) = vexRT[Btn6D];
 }

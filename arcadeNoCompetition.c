@@ -35,11 +35,14 @@ task main()
 		motor(fRbR) = (vexRT[Ch3] - (vexRT[Ch4] * (speed))) * motorSwitch;
 		motor(fLbL) = (vexRT[Ch3] + (vexRT[Ch4] * (speed))) * motorSwitch;
 
-		motor(forkRight) = vexRT[Ch2];
-		motor(forkLeft) = vexRT[Ch2];
+		motor(armRight) = vexRT[Ch2];
+		motor(armLeft) = vexRT[Ch2];
 
-		motor(clawLeft) = vexRT[Btn6U] - vexRT[Btn6D];
-		motor(clawRight) = vexRT[Btn6U] - vexRT[Btn6D];
+		motor(clawLeft) = 126 * vexRT[Btn5U]- (126 * vexRT[Btn5D]);
+		motor(clawRight) = 126 * vexRT[Btn5U] - (126 * vexRT[Btn5D]);
+							 
+		motor(forkRight) =  126 * vexRT[Btn6U]- (126 * vexRT[Btn6D]);
+		motor(forkRight) =  126 * vexRT[Btn6U]- (126 * vexRT[Btn6D]);
 		
 		if(motorSwitch == -1) {
 			SensorValue[reverseOn] = true;

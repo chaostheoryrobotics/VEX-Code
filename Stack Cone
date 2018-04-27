@@ -1,0 +1,72 @@
+//void stackCone() {
+//	while(SensorValue[coneArm] < 155) {
+//		motor(chainArm) = 126;
+//		motor(intake) = -70;
+//	}
+//	motor(chainArm) = -20;
+//	wait1Msec(200);
+
+//	while(SensorValue[coneArm] > 133) {
+//		motor(chainArm) = -126;
+//	}
+//	motor(chainArm) = -20;
+//	wait1Msec(200);
+
+//	while(SensorValue[liftSensor] > -20) {
+//		motor(bottomLeft) = -60;
+//		motor(bottomRight) = -60;
+//		motor(topRight) = -60;
+//		motor(topLeft) = -60;
+//	}
+//	motor(bottomLeft) = 5;
+//	motor(bottomRight) = 5;
+//	motor(topRight) = 5;
+//	motor(topLeft) = 5;
+//	wait1Msec(190);
+//	motor(bottomLeft) = 0;
+//	motor(bottomRight) = 0;
+//	motor(topRight) = 0;
+//	motor(topLeft) = 0;
+
+
+//	while(SensorValue[coneArm] > 60) {
+//		motor(chainArm) = -100;
+//		motor(bottomLeft) = -15;
+//		motor(bottomRight) = -15;
+//		motor(topRight) = -15;
+//		motor(topLeft) = -15;
+//	}
+//	motor(chainArm) = 35;
+//	wait1Msec(200);
+
+//	motor(chainArm) = 0;
+
+//	motor(bottomLeft) = 25;
+//	motor(bottomRight) = 25;
+//	motor(topRight) = 25;
+//	motor(topLeft) = 25;
+//	wait1Msec(300);
+
+//	motor(intake) = 87;
+//	wait1Msec(600);
+
+//	motor(bottomLeft) = -35;
+//	motor(bottomRight) = -35;
+//	motor(topRight) = -35;
+//	motor(topLeft) = -35;
+//	motor(intake) = 127;
+//	wait1Msec(350);
+
+//	while(SensorValue[coneArm] < 128) {
+//		motor(chainArm) = 40;
+//	}
+//	motor(chainArm) = -10;
+//	wait1Msec(200);
+//	motor(chainArm) = 0;
+
+//	motor(bottomLeft) = 35;
+//	motor(bottomRight) = 35;
+//	motor(topRight) = 35;
+//	motor(topLeft) = 35;
+//	wait1Msec(500);
+//}
